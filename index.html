@@ -11,6 +11,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -24,19 +25,36 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+                    <li class="hamburger"><a href="#"><i class="fa-solid fa-bars"></i></a></li>
                 </ul>
             </nav>
         </header>
 
+        <!-- Scrim -->
+        <div class="scrim"></div>
+
         <!-- Side Navigation -->
         <nav class="side-nav">
             <ul>
-                <li><a href="">About</a></li>
-                <li><a href="">Skills</a></li>
-                <li><a href="">Projects</a></li>
-                <li><a href="">Contact</a></li>
+                <li class="scroll-to-about"><a>About</a></li>
+                <li class="scroll-to-skills"><a>Skills</a></li>
+                <li class="scroll-to-projects"><a>Projects</a></li>
+                <li class="scroll-to-contact"><a>Contact</a></li>
             </ul>
+        </nav>
+
+        <!-- Nav Menu -->
+        <nav class="menu-slideover">
+            <ul>
+                <li class="typography-label-large link"><a>HOME</a></li>
+                <li class="typography-label-large link"><a>PROJECTS</a></li>
+                <li class="typography-label-large link"><a>ABOUT</a></li>
+                <li class="typography-label-large link"><a>INTERESTS</a></li>
+                <li class="typography-label-large link"><a>CONTACT</a></li>
+            </ul>
+            <div class="close">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
         </nav>
 
         <!-- Hero Section -->
@@ -48,14 +66,42 @@
                         <span>UX Designer</span> <br>
                         This is where storytelling and delightful user journey unveiled.
                     </h1>
-                    <button><p class="typography-label">Let's begin</p><i class="fa-solid fa-arrow-down"></i></button>
+                    <button class="begin"><p class="typography-label">Let's begin</p><i class="fa-solid fa-arrow-down"></i></button>
                 </div>
             </div>
             <img src="images/hero_image.png" alt="">
         </section>
 
+        <!-- About Section -->
+        <section id="about" class="about-me">
+            <h1 class="typography-heading">About me</h1>
+            <div class="row">
+                <div class="stats-card">
+                    <h1 class="typography-heading">2 years</h1>
+                    <p class="typography-body">UX design experience</p>
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+                <div class="stats-card">
+                    <h1 class="typography-heading">5 total</h1>
+                    <p class="typography-body">UX projects built</p>
+                    <i class="fa-solid fa-pen-ruler"></i>
+                </div>
+                <div class="stats-card">
+                    <h1 class="typography-heading">12+</h1>
+                    <p class="typography-body">Multi-disciplinary skills</p>
+                    <i class="fa-solid fa-book"></i>
+                </div>
+            </div>
+            <p class="typography-body">
+                To whoever reading this,
+                Here is a story that reveals the truth about myself. <br>
+                <br>
+                I used to be in the realm of Computer Science, especially software development. However, I didn’t want to be a traditional software developer focused solely on coding. I wanted to be a designer who solves users’ problems and promotes meaningful values for products. So, I transitioned to UX design to craft experiences that delight human emotions while taking care of their needs. I still value the importance of system thinking in Computer Science, which I applied to craft beautiful designs that embed cohesion, robustness, and scalability in their essence. I combine the beauty of user-centred design and the inner workings of “mechanics” to produce unique design solutions.
+            </p>
+        </section>
+
          <!--  My UX Skills section coded using CSS flex -->
-        <section class="my-skills">
+        <section id="skills" class="my-skills">
             <div class="area">
                 <h1 class="typography-heading">Area</h1>
                 <div class="rows">
@@ -194,7 +240,7 @@
         </section>
 
         <!-- My Work Section Constructed using CSS Grid -->
-        <section class="my-work">
+        <section id="projects" class="my-work">
             <h1 class="typography-heading">Projects</h1>
             <div class="project-grid">
                 <div class="project-card">
@@ -242,7 +288,7 @@
         </section>
 
         <!-- Footer -->
-        <footer>
+        <footer id="contact">
             <div class="contact-content">
                 <h1 class="typography-heading">Get in touch!</h1>
                 <p>You can find my contact information below.</p>
@@ -262,7 +308,7 @@
                 <span>Copyright 2023</span>
             </div>
         </footer>
-        <script src="" async defer></script>
         <script src="https://kit.fontawesome.com/886f771802.js" crossorigin="anonymous"></script>
+        <script src="js/index.js" async defer></script>
     </body>
 </html>
